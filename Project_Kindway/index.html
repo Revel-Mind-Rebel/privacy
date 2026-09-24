@@ -1,15 +1,4 @@
 <!DOCTYPE html>
-<!--
-  ============================================================
-  게시 전 반드시 할 일
-  ------------------------------------------------------------
-  revel.mind.rebel@gmail.com 를 실제 연락처 이메일로 교체한다.
-  한국어 1곳 + 영어 1곳, 총 2곳이다. Ctrl+F 로 찾으면 된다.
-  교체 후 페이지를 열어 붉은 점선 상자가 남아 있지 않은지 확인한다.
-
-  시행일을 바꿀 때는 <time> 두 곳과 문서 하단 문구를 함께 고친다.
-  ============================================================
--->
 <html lang="ko">
 <head>
 <meta charset="utf-8">
@@ -24,8 +13,6 @@
     --muted: #6b625a;
     --line: #e4dccf;
     --accent: #3f6b4a;
-    --todo-bg: #fdecec;
-    --todo-line: #d9534f;
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
@@ -35,8 +22,6 @@
       --muted: #a89d90;
       --line: #3a352f;
       --accent: #8fc79f;
-      --todo-bg: #3a2020;
-      --todo-line: #e07b77;
     }
   }
   * { box-sizing: border-box; }
@@ -70,10 +55,6 @@
   th, td { text-align: left; padding: 10px 12px; border: 1px solid var(--line); vertical-align: top; }
   th { background: var(--surface); font-weight: 600; }
   .card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 4px 20px; margin: 20px 0; }
-  .todo {
-    background: var(--todo-bg); border: 1px dashed var(--todo-line);
-    border-radius: 6px; padding: 2px 8px; font-weight: 700; color: var(--todo-line);
-  }
   footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.87rem; }
   [hidden] { display: none !important; }
 </style>
@@ -94,7 +75,7 @@
 <!-- ================= 한국어 ================= -->
 <main id="ko">
 
-<p><strong>시행일: <time datetime="2026-09-20">2026년 9월 20일</time></strong></p>
+<p><strong>시행일: <time datetime="2026-09-24">2026년 9월 24일</time></strong></p>
 
 <p>Revel Mind Rebel(이하 "개발자")은 모바일 게임 <strong>Kindway: Connect Puzzle</strong>(이하 "이 앱")을
 이용하시는 분의 개인정보를 소중하게 생각합니다. 이 문서는 이 앱에서 어떤 정보가 수집되고, 누가
@@ -103,50 +84,55 @@
 <div class="card">
 <h3>요약</h3>
 <ul>
-  <li>개발자는 이용자의 개인정보를 <strong>직접 수집하지 않습니다.</strong> 이 앱에는 회원가입이나 로그인이 없습니다.</li>
-  <li>게임 진행 기록과 설정은 <strong>이용자의 기기 안에만</strong> 저장되며 외부로 전송되지 않습니다.</li>
-  <li>이 앱은 <strong>광고를 표시합니다.</strong> 광고 제공사인 Google이 광고 게재를 위해 일부 정보를 수집합니다.</li>
-  <li>맞춤 광고에 대한 동의는 <strong>언제든지 변경하거나 철회</strong>할 수 있습니다.</li>
+  <li>이 앱에는 회원가입이나 로그인이 없으며 이름·이메일·전화번호를 게임 내에서 입력받지 않습니다.</li>
+  <li>전체 게임 저장 기록과 설정은 기기에 저장됩니다. 다만 일부 플레이 이벤트는 <strong>Firebase Analytics</strong>로 전송됩니다.</li>
+  <li><strong>Google AdMob</strong>은 광고 제공을 위해 기기 식별자, IP 주소, 앱 상호작용 및 진단 정보를 수집·공유할 수 있습니다.</li>
+  <li>해당 지역에서 제공되는 개인정보 옵션을 통해 광고 및 분석 목적의 동의 선택을 변경할 수 있습니다.</li>
 </ul>
 </div>
 
-<h2>1. 개발자가 수집하는 정보</h2>
+<h2>1. 앱에서 처리하는 정보</h2>
 
-<p><strong>없습니다.</strong> 이 앱은 이용자의 이름, 이메일, 전화번호, 위치, 연락처, 사진 등 어떠한
-개인정보도 수집하거나 서버로 전송하지 않습니다. 이 앱에는 회원가입, 로그인, 계정 연동 기능이 없습니다.</p>
+<p>이 앱에는 회원가입, 로그인, 계정 연동 기능이 없으며 이름·이메일·전화번호·연락처·사진을
+게임 내에서 입력받지 않습니다. 그러나 아래의 광고 및 분석 SDK가 일부 기기·이용 정보를 기기 밖으로
+전송합니다. 개발자는 Firebase Analytics에서 집계된 이용 현황과 이벤트 통계를 확인할 수 있습니다.</p>
 
 <h3>기기에만 저장되는 정보</h3>
 
-<p>아래 정보는 이용자의 기기 내부 저장 공간에만 기록되며, 개발자를 포함한 누구에게도 전송되지 않습니다.</p>
+<p>아래의 전체 저장 기록과 설정은 이용자의 기기 내부 저장 공간에 보관되며 개발자 서버로
+업로드되지 않습니다. 단, 일부 플레이 행동은 3항에 설명한 별도의 분석 이벤트로 전송됩니다.</p>
 
 <ul>
   <li>게임 진행 기록 (챕터 진행도, 별 획득, 일일 도전 기록, 뱃지, 업적, 통계)</li>
   <li>앱 설정 (소리, 진동, 언어)</li>
 </ul>
 
-<p>이 정보는 <strong>앱을 삭제하면 기기에서 함께 삭제됩니다.</strong></p>
+<p>기기에 저장된 이 정보는 <strong>앱을 삭제하면 기기에서 함께 삭제됩니다.</strong>
+분석 서비스에 이미 전송된 이벤트는 앱 삭제만으로 즉시 삭제되지 않습니다.</p>
 
 <h2>2. 광고를 통해 수집되는 정보</h2>
 
 <p>이 앱은 무료로 제공되며, 운영을 위해 Google의 광고 서비스인 <strong>Google AdMob</strong>을 사용하여
 보상형 광고와 전면 광고를 표시합니다.</p>
 
-<p>Google은 광고를 게재하고 그 성과를 측정하기 위해 다음과 같은 정보를 수집하고 이용할 수 있습니다.</p>
+<p>Google Mobile Ads SDK는 광고 게재·성과 분석·사기 방지를 위해 다음 정보를
+기기 밖으로 전송하고 Google과 공유할 수 있습니다.</p>
 
 <table>
   <thead>
     <tr><th>수집 항목</th><th>이용 목적</th></tr>
   </thead>
   <tbody>
-    <tr><td>광고 식별자 (Android 광고 ID)</td><td>광고 게재, 노출 빈도 제한, 광고 성과 측정</td></tr>
-    <tr><td>IP 주소</td><td>대략적인 지역 확인(국가·도시 수준), 부정 행위 방지</td></tr>
-    <tr><td>기기 정보</td><td>기기 모델, 운영체제 버전, 언어 설정 등 광고 호환성 확인</td></tr>
-    <tr><td>광고 상호작용 기록</td><td>광고 조회 및 클릭 여부, 중복 노출 방지</td></tr>
+    <tr><td>광고 ID·앱 세트 ID 등 기기 식별자</td><td>광고 게재·성과 분석·사기 방지</td></tr>
+    <tr><td>IP 주소 및 이를 통해 추정한 대략적인 위치</td><td>지역별 광고 제공·분석·사기 방지</td></tr>
+    <tr><td>앱 실행·탭·광고 조회 등 상호작용</td><td>광고 성과 측정·분석·사기 방지</td></tr>
+    <tr><td>앱 및 SDK 성능 관련 진단 정보</td><td>성능 분석·광고 서비스 운영·사기 방지</td></tr>
   </tbody>
 </table>
 
-<p>이 정보는 <strong>Google이 수집하며 개발자는 접근할 수 없습니다.</strong> 개발자는 광고 수익에 관한
-통계만 집계된 형태로 확인합니다.</p>
+<p>개발자는 AdMob의 광고 노출·수익 등 보고서를 확인할 수 있지만, 광고 SDK가 수집한
+개별 이용자의 원본 식별자나 IP 주소를 직접 제공받지는 않습니다.
+IP 주소에서 대략적인 위치가 추정될 수 있으나 앱은 Android 위치 접근 권한을 요청하지 않습니다.</p>
 
 <p>Google이 파트너 앱에서 수집한 정보를 어떻게 이용하는지는 아래 문서에서 확인하실 수 있습니다.</p>
 
@@ -155,32 +141,55 @@
   <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a></li>
 </ul>
 
-<h2>3. 맞춤 광고 동의와 철회</h2>
+<h2>3. 앱 이용 분석</h2>
 
-<p>유럽 경제 지역(EEA), 영국, 스위스 및 일부 미국 주에서는 앱을 처음 실행할 때 광고 관련 동의를
-묻는 화면이 표시됩니다. 이 화면은 Google의 사용자 메시지 플랫폼(UMP)을 통해 제공됩니다.</p>
+<p>앱의 이용 현황을 파악하고 게임을 개선하기 위해 <strong>Google Analytics for Firebase</strong>를
+사용합니다. 수집이 허용된 경우 SDK는 앱 인스턴스 ID, 마스킹된 IP 주소로부터 추정한 대략적인 위치,
+앱 실행·세션 등 기본 이용 정보를 처리할 수 있습니다.</p>
+
+<p>개발자가 별도로 기록하는 이벤트는 챕터 시작·클리어(챕터 번호 포함), 일일 도전 시작·클리어,
+보상형 광고 완료(광고 위치 포함)입니다. 이벤트에는 이름·이메일·사용자 ID·정확한 날짜·점수를
+직접 넣지 않습니다. 전체 게임 저장 파일이나 업적·뱃지 기록을 분석 서비스에 업로드하지 않습니다.</p>
+
+<p>이 정보는 이용자 수와 기능 사용 현황을 분석하고 게임을 개선하는 데 사용됩니다.
+개발자는 Firebase/Google Analytics 보고서에서 집계 통계와 이벤트 현황을 확인할 수 있습니다.
+현재 앱은 Firebase Analytics의 광고 ID 수집과 광고 개인화 기능을 별도로 비활성화했으며,
+분석 이벤트를 광고 타기팅 목적으로 따로 전송하지 않습니다.</p>
+
+<p>분석 수집은 기본적으로 꺼진 상태에서 시작합니다. 동의가 필요한 지역에서는 UMP의 분석 목적
+동의 상태에 따라 켜거나 유지하지 않으며, 동의가 필요하지 않은 지역에서는 동의 상태 갱신 후
+켜질 수 있습니다. 관련 정보는 <a href="https://firebase.google.com/support/privacy" target="_blank"
+rel="noopener">Firebase 개인정보 및 보안 안내</a>와
+<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a>을 참고하세요.</p>
+
+<h2>4. 광고·분석 동의와 철회</h2>
+
+<p>유럽 경제 지역(EEA), 영국, 스위스 및 일부 미국 주에서는 필요한 경우 광고·분석 목적의
+선택을 묻는 화면이 표시됩니다. 이 화면은 Google의 사용자 메시지 플랫폼(UMP)을 통해 제공됩니다.
+지역과 이용자의 선택에 따라 광고 및 분석 데이터 처리가 달라질 수 있습니다.</p>
 
 <p>동의 여부는 <strong>언제든지 변경할 수 있습니다.</strong></p>
 
 <ul>
-  <li><strong>앱 안에서:</strong> 설정 화면의 <em>개인정보 옵션</em> 항목을 선택하면 동의 화면을 다시 열 수 있습니다.
-      이 항목은 해당 지역의 이용자에게만 표시됩니다.</li>
+  <li><strong>앱 안에서:</strong> 설정 화면의 <em>개인정보 옵션</em> 항목을 선택하면
+      해당 지역에 제공되는 동의 화면을 다시 열 수 있습니다. 이 항목은 필요한 지역의 이용자에게만 표시됩니다.</li>
   <li><strong>기기 설정에서:</strong> Android 기기의 <em>설정 → Google → 광고</em> 메뉴에서 광고 ID를
       재설정하거나 삭제할 수 있습니다. 메뉴 위치는 제조사와 Android 버전에 따라 다를 수 있습니다.</li>
   <li><strong>Google 계정에서:</strong> <a href="https://adssettings.google.com" target="_blank" rel="noopener">Google 광고 설정</a>에서
       맞춤 광고를 끌 수 있습니다.</li>
 </ul>
 
-<p>맞춤 광고를 끄셔도 광고는 계속 표시되지만, 관심사를 반영하지 않은 일반 광고가 표시됩니다.</p>
+<p>맞춤 광고를 끄셔도 일반 광고가 표시될 수 있습니다. UMP에서 분석 목적에 동의하지 않은 지역의
+이용자에 대해서는 앱이 Firebase Analytics 수집을 켜지 않습니다.</p>
 
-<h2>4. 앱이 요청하는 권한</h2>
+<h2>5. 앱이 요청하는 권한</h2>
 
 <table>
   <thead>
     <tr><th>권한</th><th>사용 목적</th></tr>
   </thead>
   <tbody>
-    <tr><td>인터넷 접속</td><td>광고를 내려받기 위해 사용합니다. 게임 진행 자체에는 인터넷이 필요하지 않습니다.</td></tr>
+    <tr><td>인터넷 접속</td><td>광고를 내려받고 허용된 분석 정보를 전송하는 데 사용합니다. 게임 진행 자체에는 인터넷이 필요하지 않습니다.</td></tr>
     <tr><td>진동</td><td>버튼을 누르거나 그림을 연결할 때 촉각 반응을 제공합니다. 설정에서 끌 수 있습니다.</td></tr>
     <tr><td>광고 ID</td><td>광고 게재를 위해 Google 광고 라이브러리가 사용합니다.</td></tr>
   </tbody>
@@ -188,7 +197,7 @@
 
 <p>이 앱은 위치, 카메라, 마이크, 연락처, 사진, 파일 접근 권한을 요청하지 않습니다.</p>
 
-<h2>5. 아동의 개인정보</h2>
+<h2>6. 아동의 개인정보</h2>
 
 <p>이 앱은 <strong>만 13세 이상</strong>을 대상으로 하며, 13세 미만 어린이를 주 대상으로 하지 않습니다.
 개발자는 13세 미만 어린이의 개인정보를 고의로 수집하지 않습니다.</p>
@@ -196,31 +205,34 @@
 <p>보호자께서 자녀가 이 앱을 통해 정보를 제공했다고 생각하실 경우 아래 연락처로 알려주시면 확인 후
 관련 정보를 삭제하도록 조치하겠습니다.</p>
 
-<h2>6. 정보의 보관과 삭제</h2>
+<h2>7. 정보의 보관과 삭제</h2>
 
 <ul>
   <li>기기에 저장된 게임 기록과 설정은 <strong>앱을 삭제하면 함께 삭제됩니다.</strong></li>
-  <li>개발자는 별도로 보관하는 이용자 정보가 없습니다.</li>
-  <li>Google이 수집한 광고 관련 정보의 보관 기간과 삭제 방법은 Google의 개인정보처리방침을 따릅니다.</li>
+  <li>개발자는 별도의 계정 데이터베이스나 게임 기록 서버를 운영하지 않습니다.</li>
+  <li>광고 및 분석 SDK에 전송된 정보는 각 서비스의 보관·삭제 설정과 Google의 정책에 따라 처리됩니다.
+      앱을 삭제해도 이미 전송된 정보가 즉시 삭제되는 것은 아닙니다.</li>
 </ul>
 
-<h2>7. 이용자의 권리</h2>
+<h2>8. 이용자의 권리</h2>
 
 <p>거주 지역의 법률(유럽의 GDPR, 미국 캘리포니아주의 CCPA/CPRA 등)에 따라 이용자는 자신의 개인정보에
 대한 열람, 정정, 삭제, 처리 거부를 요청할 권리를 가질 수 있습니다.</p>
 
-<p>개발자는 이용자의 개인정보를 보유하고 있지 않으므로, 광고와 관련된 정보에 대한 요청은 수집 주체인
-Google에 직접 하셔야 합니다. 요청 방법은
-<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a>에 안내되어 있습니다.</p>
+<p>개발자는 이용자의 이름이나 계정을 보유하지 않지만 Google Analytics의 분석 보고서를 확인합니다.
+정보 처리 또는 법률상 권리에 관한 문의는 아래 이메일로 보내실 수 있습니다. Google 계정의 광고
+설정과 Google이 처리하는 정보에 관한 안내는
+<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a>을 참고하세요.</p>
 
-<p>개발자는 개인정보를 판매하지 않으며, 광고 게재 외의 목적으로 제3자와 공유하지 않습니다.</p>
+<p>개발자는 개인정보를 판매하지 않습니다. 광고 SDK는 2항의 목적에 따라 정보를 처리하며,
+분석 정보는 3항의 목적에 따라 Google Analytics for Firebase에서 처리됩니다.</p>
 
-<h2>8. 방침의 변경</h2>
+<h2>9. 방침의 변경</h2>
 
 <p>이 개인정보처리방침은 법령이나 서비스 내용의 변경에 따라 개정될 수 있습니다. 개정 시에는 이 페이지에
 변경된 내용과 시행일을 게시합니다. 중요한 변경이 있을 경우 앱 내에서 별도로 안내합니다.</p>
 
-<h2>9. 문의처</h2>
+<h2>10. 문의처</h2>
 
 <p>이 개인정보처리방침이나 개인정보 처리에 관한 문의는 아래로 연락해 주시기 바랍니다.</p>
 
@@ -234,7 +246,7 @@ Google에 직접 하셔야 합니다. 요청 방법은
 <!-- ================= English ================= -->
 <main id="en" hidden>
 
-<p><strong>Effective date: <time datetime="2026-09-20">September 20, 2026</time></strong></p>
+<p><strong>Effective date: <time datetime="2026-09-24">September 24, 2026</time></strong></p>
 
 <p>Revel Mind Rebel ("we", "us") respects the privacy of everyone who plays
 <strong>Kindway: Connect Puzzle</strong> ("the App"). This policy explains what information is
@@ -243,51 +255,56 @@ collected, who collects it, and what choices you have.</p>
 <div class="card">
 <h3>Summary</h3>
 <ul>
-  <li>We <strong>do not collect any personal information</strong> ourselves. The App has no sign-up and no login.</li>
-  <li>Your game progress and settings are stored <strong>only on your device</strong> and are never transmitted.</li>
-  <li>The App <strong>shows advertisements.</strong> Google, our advertising provider, collects certain information in order to serve them.</li>
-  <li>You can <strong>change or withdraw your consent</strong> to personalized advertising at any time.</li>
+  <li>The App has no sign-up or login and does not ask you to enter your name, email address, or phone number in the game.</li>
+  <li>Your full game save and settings stay on your device. Some gameplay events are sent to <strong>Firebase Analytics</strong>.</li>
+  <li><strong>Google AdMob</strong> may collect and share device identifiers, IP addresses, app interactions, and diagnostic information to provide ads.</li>
+  <li>Where privacy options are available, you can change your choices about advertising and analytics purposes.</li>
 </ul>
 </div>
 
-<h2>1. Information we collect</h2>
+<h2>1. Information processed by the App</h2>
 
-<p><strong>None.</strong> The App does not collect or transmit your name, email address, phone number,
-location, contacts, photos, or any other personal information. There is no account, login, or sign-in
-of any kind.</p>
+<p>The App has no account, login, or sign-in feature and does not ask you to enter your name,
+email address, phone number, contacts, or photos in the game. However, the advertising and
+analytics SDKs described below transmit some device and usage information off your device.
+We can view aggregated usage and event reports in Firebase Analytics.</p>
 
 <h3>Information stored on your device only</h3>
 
-<p>The following is written to your device's local storage and is never sent to us or to anyone else:</p>
+<p>Your full save and settings remain in local storage and are not uploaded to a developer-operated
+server. Some gameplay actions are transmitted separately as analytics events, as described in Section 3.</p>
 
 <ul>
   <li>Game progress (chapter progress, stars, daily challenge records, badges, achievements, statistics)</li>
   <li>App settings (sound, vibration, language)</li>
 </ul>
 
-<p>This data is <strong>deleted from your device when you uninstall the App.</strong></p>
+<p>This locally stored information is <strong>deleted from your device when you uninstall the App.</strong>
+Uninstalling does not immediately delete analytics events that were already transmitted.</p>
 
 <h2>2. Information collected through advertising</h2>
 
 <p>The App is free to play. To support it, we use <strong>Google AdMob</strong> to display rewarded
 and interstitial advertisements.</p>
 
-<p>Google may collect and use the following information in order to serve ads and measure their performance:</p>
+<p>The Google Mobile Ads SDK may transmit and share the following information with Google
+for ad delivery, analytics, and fraud prevention:</p>
 
 <table>
   <thead>
     <tr><th>Data</th><th>Purpose</th></tr>
   </thead>
   <tbody>
-    <tr><td>Advertising identifier (Android Advertising ID)</td><td>Serving ads, frequency capping, measuring ad performance</td></tr>
-    <tr><td>IP address</td><td>Approximate location (country/city level), fraud prevention</td></tr>
-    <tr><td>Device information</td><td>Device model, OS version, language settings and similar compatibility data</td></tr>
-    <tr><td>Ad interaction data</td><td>Whether an ad was viewed or clicked, preventing repeated impressions</td></tr>
+    <tr><td>Device identifiers, such as the advertising ID and app set ID</td><td>Ad delivery, performance analysis, and fraud prevention</td></tr>
+    <tr><td>IP address and approximate location inferred from it</td><td>Regional ad delivery, analytics, and fraud prevention</td></tr>
+    <tr><td>Interactions such as app launches, taps, and ad views</td><td>Ad measurement, analytics, and fraud prevention</td></tr>
+    <tr><td>App and SDK performance diagnostics</td><td>Performance analysis, ad service operation, and fraud prevention</td></tr>
   </tbody>
 </table>
 
-<p>This information is <strong>collected by Google and is not accessible to us.</strong> We only see
-aggregated revenue statistics.</p>
+<p>We can view AdMob reports such as ad impressions and revenue, but are not directly provided
+with an individual user's raw advertising identifiers or IP address. An IP address may be used
+to infer approximate location, although the App does not request Android location permission.</p>
 
 <p>You can read how Google uses data collected from partner apps here:</p>
 
@@ -296,34 +313,58 @@ aggregated revenue statistics.</p>
   <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
 </ul>
 
-<h2>3. Advertising consent and how to withdraw it</h2>
+<h2>3. App usage analytics</h2>
 
-<p>If you are in the European Economic Area, the United Kingdom, Switzerland, or certain U.S. states,
-a consent screen appears when you first open the App. This screen is provided through Google's
-User Messaging Platform (UMP).</p>
+<p>We use <strong>Google Analytics for Firebase</strong> to understand app usage and improve the game.
+When collection is enabled, the SDK may process an app-instance ID, approximate location derived
+from a masked IP address, and basic app lifecycle information such as launches and sessions.</p>
+
+<p>Our custom events record chapter starts and clears (including a chapter number), daily challenge
+starts and clears, and completed rewarded ads (including the ad placement). We do not directly add
+a name, email address, user ID, exact date, or score to these events. We do not upload your full
+game save, achievements, or badge records to the analytics service.</p>
+
+<p>This information is used to measure player counts and feature usage and to improve the game.
+We can view aggregated statistics and event reports in Firebase/Google Analytics. The App currently
+disables Firebase Analytics advertising ID collection and ad personalization separately, and does
+not separately send analytics events for ad targeting.</p>
+
+<p>Analytics collection starts disabled. In regions where consent is required, it is enabled or
+kept disabled based on the UMP analytics-purpose consent state. In regions where consent is not
+required, it may be enabled after the consent-status update. For more information, see
+<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase privacy
+and security information</a> and the
+<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
+
+<h2>4. Advertising and analytics consent</h2>
+
+<p>In the European Economic Area, the United Kingdom, Switzerland, and certain U.S. states,
+an advertising and analytics choice screen is shown when required. It is provided through Google's
+User Messaging Platform (UMP). Data processing may vary by region and by your choices.</p>
 
 <p>You may <strong>change your choice at any time:</strong></p>
 
 <ul>
-  <li><strong>In the App:</strong> open Settings and select <em>Privacy options</em> to reopen the consent screen.
-      This item is shown only to players in regions where it applies.</li>
+  <li><strong>In the App:</strong> open Settings and select <em>Privacy options</em> to reopen the
+      applicable choice screen. This item is shown only in regions where it is required.</li>
   <li><strong>On your device:</strong> go to <em>Settings → Google → Ads</em> on Android to reset or delete your
       advertising ID. The exact path varies by manufacturer and Android version.</li>
   <li><strong>In your Google Account:</strong> turn off personalized advertising at
       <a href="https://adssettings.google.com" target="_blank" rel="noopener">Google Ad Settings</a>.</li>
 </ul>
 
-<p>Turning off personalized advertising does not remove ads. You will continue to see ads, but they
-will not be based on your interests.</p>
+<p>Turning off personalized advertising may still allow non-personalized ads. For users in regions
+where analytics-purpose consent is required, the App does not enable Firebase Analytics collection
+when that consent is declined.</p>
 
-<h2>4. Permissions the App requests</h2>
+<h2>5. Permissions the App requests</h2>
 
 <table>
   <thead>
     <tr><th>Permission</th><th>Why it is needed</th></tr>
   </thead>
   <tbody>
-    <tr><td>Internet access</td><td>Used to download advertisements. Gameplay itself does not require a connection.</td></tr>
+    <tr><td>Internet access</td><td>Used to download ads and transmit analytics data when enabled. Gameplay itself does not require a connection.</td></tr>
     <tr><td>Vibration</td><td>Provides tactile feedback when you tap buttons or connect pictures. Can be turned off in Settings.</td></tr>
     <tr><td>Advertising ID</td><td>Used by the Google advertising library to serve ads.</td></tr>
   </tbody>
@@ -331,7 +372,7 @@ will not be based on your interests.</p>
 
 <p>The App does not request access to your location, camera, microphone, contacts, photos, or files.</p>
 
-<h2>5. Children's privacy</h2>
+<h2>6. Children's privacy</h2>
 
 <p>The App is intended for players <strong>aged 13 and over</strong> and is not directed to children
 under 13. We do not knowingly collect personal information from children under 13.</p>
@@ -339,34 +380,38 @@ under 13. We do not knowingly collect personal information from children under 1
 <p>If you are a parent or guardian and believe your child has provided information through the App,
 please contact us at the address below and we will take steps to delete it.</p>
 
-<h2>6. Data retention and deletion</h2>
+<h2>7. Data retention and deletion</h2>
 
 <ul>
   <li>Game progress and settings stored on your device are <strong>deleted when you uninstall the App.</strong></li>
-  <li>We hold no user data of our own.</li>
-  <li>Retention and deletion of advertising data collected by Google is governed by Google's privacy policy.</li>
+  <li>We do not operate a separate account database or game-save server.</li>
+  <li>Information transmitted to advertising and analytics SDKs is handled under each service's
+      retention and deletion settings and Google's policies. Uninstalling the App does not immediately
+      delete information already transmitted.</li>
 </ul>
 
-<h2>7. Your rights</h2>
+<h2>8. Your rights</h2>
 
 <p>Depending on where you live, you may have rights to access, correct, delete, or object to the
 processing of your personal information — for example under the GDPR in Europe or the CCPA/CPRA in
 California.</p>
 
-<p>Because we do not hold any of your personal information, requests concerning advertising data must
-be directed to Google, which collects it. Instructions are provided in the
-<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
+<p>We do not hold your name or an account for you, but we can view Google Analytics reports.
+You may contact us at the email below about our data practices or rights provided by applicable
+law. For guidance on Google Account advertising settings and information processed by Google,
+see the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
 
-<p>We do not sell personal information, and we do not share it with third parties for any purpose other
-than serving advertisements as described above.</p>
+<p>We do not sell personal information. The advertising SDK processes information for the purposes
+in Section 2, and Google Analytics for Firebase processes analytics information for the purposes
+in Section 3.</p>
 
-<h2>8. Changes to this policy</h2>
+<h2>9. Changes to this policy</h2>
 
 <p>We may update this policy to reflect changes in the law or in the App. When we do, the revised policy
 and its effective date will be posted on this page. We will provide notice inside the App for
 significant changes.</p>
 
-<h2>9. Contact</h2>
+<h2>10. Contact</h2>
 
 <p>If you have questions about this policy or about how your information is handled, please contact us:</p>
 
@@ -379,7 +424,7 @@ significant changes.</p>
 
 <footer>
   <p>Kindway: Connect Puzzle · Revel Mind Rebel<br>
-  최종 수정: 2026년 9월 20일 / Last updated: September 20, 2026</p>
+  최종 수정: 2026년 9월 24일 / Last updated: September 24, 2026</p>
 </footer>
 
 </div>
