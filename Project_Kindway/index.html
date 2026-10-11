@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kindway: Connect Puzzle — 개인정보처리방침 / Privacy Policy</title>
-<meta name="description" content="Kindway: Connect Puzzle 개인정보처리방침 / Privacy Policy">
+<title>Kindway: Connect Puzzle — 개인정보처리방침 / Privacy Policy / プライバシーポリシー</title>
+<meta name="description" content="Kindway: Connect Puzzle 개인정보처리방침 / Privacy Policy / プライバシーポリシー">
 <style>
   :root {
     --bg: #fbf7f0;
@@ -29,7 +29,7 @@
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", Roboto, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR", "Noto Sans JP", Roboto, sans-serif;
     line-height: 1.75;
     font-size: 16px;
   }
@@ -64,18 +64,19 @@
 
 <header>
   <h1>Kindway: Connect Puzzle</h1>
-  <p class="sub">개인정보처리방침 · Privacy Policy</p>
+  <p class="sub">개인정보처리방침 · Privacy Policy · プライバシーポリシー</p>
 </header>
 
 <nav class="lang">
   <button type="button" data-lang="ko" aria-pressed="true">한국어</button>
   <button type="button" data-lang="en" aria-pressed="false">English</button>
+  <button type="button" data-lang="ja" aria-pressed="false">日本語</button>
 </nav>
 
 <!-- ================= 한국어 ================= -->
 <main id="ko">
 
-<p><strong>시행일: <time datetime="2026-09-24">2026년 9월 24일</time></strong></p>
+<p><strong>시행일: <time datetime="2026-10-04">2026년 10월 4일</time></strong></p>
 
 <p>Revel Mind Rebel(이하 "개발자")은 모바일 게임 <strong>Kindway: Connect Puzzle</strong>(이하 "이 앱")을
 이용하시는 분의 개인정보를 소중하게 생각합니다. 이 문서는 이 앱에서 어떤 정보가 수집되고, 누가
@@ -85,7 +86,7 @@
 <h3>요약</h3>
 <ul>
   <li>이 앱에는 회원가입이나 로그인이 없으며 이름·이메일·전화번호를 게임 내에서 입력받지 않습니다.</li>
-  <li>전체 게임 저장 기록과 설정은 기기에 저장됩니다. 다만 일부 플레이 이벤트는 <strong>Firebase Analytics</strong>로 전송됩니다.</li>
+  <li>전체 게임 저장 기록과 설정은 기기에 저장됩니다. 분석 목적을 명시적으로 허용한 경우에만 일부 플레이 이벤트가 <strong>Firebase Analytics</strong>로 전송됩니다.</li>
   <li><strong>Google AdMob</strong>은 광고 제공을 위해 기기 식별자, IP 주소, 앱 상호작용 및 진단 정보를 수집·공유할 수 있습니다.</li>
   <li>해당 지역에서 제공되는 개인정보 옵션을 통해 광고 및 분석 목적의 동의 선택을 변경할 수 있습니다.</li>
 </ul>
@@ -114,6 +115,8 @@
 
 <p>이 앱은 무료로 제공되며, 운영을 위해 Google의 광고 서비스인 <strong>Google AdMob</strong>을 사용하여
 보상형 광고와 전면 광고를 표시합니다.</p>
+
+<p>이 앱은 개별 이용자의 나이를 확인하지 않습니다. 광고를 요청할 때는 모든 이용자에게 청소년 대상 보호 설정을 적용합니다. 이 설정은 광고 SDK의 데이터 전송 자체를 중지하지 않습니다.</p>
 
 <p>Google Mobile Ads SDK는 광고 게재·성과 분석·사기 방지를 위해 다음 정보를
 기기 밖으로 전송하고 Google과 공유할 수 있습니다.</p>
@@ -156,9 +159,9 @@ IP 주소에서 대략적인 위치가 추정될 수 있으나 앱은 Android �
 현재 앱은 Firebase Analytics의 광고 ID 수집과 광고 개인화 기능을 별도로 비활성화했으며,
 분석 이벤트를 광고 타기팅 목적으로 따로 전송하지 않습니다.</p>
 
-<p>분석 수집은 기본적으로 꺼진 상태에서 시작합니다. 동의가 필요한 지역에서는 UMP의 분석 목적
-동의 상태에 따라 켜거나 유지하지 않으며, 동의가 필요하지 않은 지역에서는 동의 상태 갱신 후
-켜질 수 있습니다. 관련 정보는 <a href="https://firebase.google.com/support/privacy" target="_blank"
+<p>분석 수집은 기본적으로 꺼진 상태에서 시작합니다. UMP가 분석 목적 저장(`analytics_storage`)에 대한
+명시적 허용을 기록한 경우에만 수집을 켭니다. 동의가 필요하지 않다는 응답이나 동의 상태가 없다는 이유만으로
+분석을 켜지 않습니다. 관련 정보는 <a href="https://firebase.google.com/support/privacy" target="_blank"
 rel="noopener">Firebase 개인정보 및 보안 안내</a>와
 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 개인정보처리방침</a>을 참고하세요.</p>
 
@@ -168,7 +171,7 @@ rel="noopener">Firebase 개인정보 및 보안 안내</a>와
 선택을 묻는 화면이 표시됩니다. 이 화면은 Google의 사용자 메시지 플랫폼(UMP)을 통해 제공됩니다.
 지역과 이용자의 선택에 따라 광고 및 분석 데이터 처리가 달라질 수 있습니다.</p>
 
-<p>동의 여부는 <strong>언제든지 변경할 수 있습니다.</strong></p>
+<p>해당 지역에서 동의 화면이 제공되는 경우 <strong>선택을 변경할 수 있습니다.</strong></p>
 
 <ul>
   <li><strong>앱 안에서:</strong> 설정 화면의 <em>개인정보 옵션</em> 항목을 선택하면
@@ -179,8 +182,8 @@ rel="noopener">Firebase 개인정보 및 보안 안내</a>와
       맞춤 광고를 끌 수 있습니다.</li>
 </ul>
 
-<p>맞춤 광고를 끄셔도 일반 광고가 표시될 수 있습니다. UMP에서 분석 목적에 동의하지 않은 지역의
-이용자에 대해서는 앱이 Firebase Analytics 수집을 켜지 않습니다.</p>
+<p>맞춤 광고를 끄셔도 일반 광고가 표시될 수 있습니다. 분석 목적을 명시적으로 허용하지 않았다면
+앱은 Firebase Analytics 수집을 켜지 않습니다.</p>
 
 <h2>5. 앱이 요청하는 권한</h2>
 
@@ -246,7 +249,7 @@ rel="noopener">Firebase 개인정보 및 보안 안내</a>와
 <!-- ================= English ================= -->
 <main id="en" hidden>
 
-<p><strong>Effective date: <time datetime="2026-09-24">September 24, 2026</time></strong></p>
+<p><strong>Effective date: <time datetime="2026-10-04">October 4, 2026</time></strong></p>
 
 <p>Revel Mind Rebel ("we", "us") respects the privacy of everyone who plays
 <strong>Kindway: Connect Puzzle</strong> ("the App"). This policy explains what information is
@@ -256,7 +259,7 @@ collected, who collects it, and what choices you have.</p>
 <h3>Summary</h3>
 <ul>
   <li>The App has no sign-up or login and does not ask you to enter your name, email address, or phone number in the game.</li>
-  <li>Your full game save and settings stay on your device. Some gameplay events are sent to <strong>Firebase Analytics</strong>.</li>
+  <li>Your full game save and settings stay on your device. Some gameplay events are sent to <strong>Firebase Analytics</strong> only when analytics storage is explicitly granted.</li>
   <li><strong>Google AdMob</strong> may collect and share device identifiers, IP addresses, app interactions, and diagnostic information to provide ads.</li>
   <li>Where privacy options are available, you can change your choices about advertising and analytics purposes.</li>
 </ul>
@@ -286,6 +289,8 @@ Uninstalling does not immediately delete analytics events that were already tran
 
 <p>The App is free to play. To support it, we use <strong>Google AdMob</strong> to display rewarded
 and interstitial advertisements.</p>
+
+<p>The App does not verify each player's age. We apply teen age treatment to ad requests for every player. This setting does not stop the advertising SDK from transmitting data.</p>
 
 <p>The Google Mobile Ads SDK may transmit and share the following information with Google
 for ad delivery, analytics, and fraud prevention:</p>
@@ -329,9 +334,9 @@ We can view aggregated statistics and event reports in Firebase/Google Analytics
 disables Firebase Analytics advertising ID collection and ad personalization separately, and does
 not separately send analytics events for ad targeting.</p>
 
-<p>Analytics collection starts disabled. In regions where consent is required, it is enabled or
-kept disabled based on the UMP analytics-purpose consent state. In regions where consent is not
-required, it may be enabled after the consent-status update. For more information, see
+<p>Analytics collection starts disabled. We enable it only when UMP records an explicit grant for
+analytics storage (<code>analytics_storage</code>). We do not enable it merely because consent is not
+required or no consent status is available. For more information, see
 <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase privacy
 and security information</a> and the
 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
@@ -342,7 +347,7 @@ and security information</a> and the
 an advertising and analytics choice screen is shown when required. It is provided through Google's
 User Messaging Platform (UMP). Data processing may vary by region and by your choices.</p>
 
-<p>You may <strong>change your choice at any time:</strong></p>
+<p>Where a consent screen is available, you may <strong>change your choice:</strong></p>
 
 <ul>
   <li><strong>In the App:</strong> open Settings and select <em>Privacy options</em> to reopen the
@@ -353,9 +358,8 @@ User Messaging Platform (UMP). Data processing may vary by region and by your ch
       <a href="https://adssettings.google.com" target="_blank" rel="noopener">Google Ad Settings</a>.</li>
 </ul>
 
-<p>Turning off personalized advertising may still allow non-personalized ads. For users in regions
-where analytics-purpose consent is required, the App does not enable Firebase Analytics collection
-when that consent is declined.</p>
+<p>Turning off personalized advertising may still allow non-personalized ads. The App does not enable
+Firebase Analytics collection unless analytics storage is explicitly granted.</p>
 
 <h2>5. Permissions the App requests</h2>
 
@@ -422,9 +426,137 @@ significant changes.</p>
 
 </main>
 
+<!-- ================= 日本語 ================= -->
+<main id="ja" hidden>
+
+<p><strong>施行日: <time datetime="2026-10-04">2026年10月4日</time></strong></p>
+
+<p>Revel Mind Rebel（以下「開発者」）は、モバイルゲーム<strong>Kindway: Connect Puzzle</strong>（以下「本アプリ」）を利用する皆さまのプライバシーを大切にしています。本ポリシーは、どのような情報が収集され、誰が収集し、利用者がどのような選択をできるかを説明します。</p>
+
+<div class="card">
+<h3>概要</h3>
+<ul>
+  <li>本アプリには会員登録やログインがなく、ゲーム内で氏名、メールアドレス、電話番号の入力を求めません。</li>
+  <li>ゲームの保存データと設定は端末内に保存されます。分析目的の保存が明示的に許可された場合に限り、一部のプレイイベントが<strong>Firebase Analytics</strong>に送信されます。</li>
+  <li><strong>Google AdMob</strong>は、広告提供のために端末識別子、IPアドレス、アプリ内の操作情報、診断情報を収集・共有する場合があります。</li>
+  <li>プライバシーに関する選択画面が提供される地域では、広告・分析に関する選択を変更できます。</li>
+</ul>
+</div>
+
+<h2>1. 本アプリが取り扱う情報</h2>
+
+<p>本アプリにはアカウント作成、ログイン、連携機能がなく、ゲーム内で氏名、メールアドレス、電話番号、連絡先、写真の入力を求めません。ただし、以下に記載する広告・分析SDKは、端末や利用状況に関する一部の情報を端末外へ送信します。開発者はFirebase Analyticsで集計された利用状況やイベントのレポートを確認できます。</p>
+
+<h3>端末内にのみ保存される情報</h3>
+
+<p>ゲームの保存データと設定は端末内に保存され、開発者が運営するサーバーにはアップロードされません。ただし、一部のプレイ行動は第3項に記載する別個の分析イベントとして送信される場合があります。</p>
+
+<ul>
+  <li>ゲームの進行記録（チャプターの進行、獲得した星、デイリーチャレンジの記録、バッジ、実績、統計）</li>
+  <li>アプリの設定（サウンド、振動、言語）</li>
+</ul>
+
+<p>端末内のこれらの情報は、<strong>本アプリをアンインストールすると端末から削除されます。</strong>すでに分析サービスへ送信されたイベントは、アンインストールだけでは直ちに削除されません。</p>
+
+<h2>2. 広告を通じて収集される情報</h2>
+
+<p>本アプリは無料で提供され、運営のために<strong>Google AdMob</strong>を利用してリワード広告と全画面広告を表示します。</p>
+
+<p>本アプリは利用者一人ひとりの年齢を確認しません。広告リクエストには、すべての利用者に対してティーン向けの年齢保護設定を適用します。この設定によって広告SDKからのデータ送信が停止するわけではありません。</p>
+
+<p>Google Mobile Ads SDKは、広告配信、効果測定、不正防止のため、次の情報を端末外に送信し、Googleと共有する場合があります。</p>
+
+<table>
+  <thead><tr><th>情報</th><th>利用目的</th></tr></thead>
+  <tbody>
+    <tr><td>広告ID、App Set IDなどの端末識別子</td><td>広告配信、効果測定、不正防止</td></tr>
+    <tr><td>IPアドレスと、そこから推定されるおおよその位置</td><td>地域に応じた広告配信、分析、不正防止</td></tr>
+    <tr><td>アプリの起動、タップ、広告の視聴などの操作情報</td><td>広告の効果測定、分析、不正防止</td></tr>
+    <tr><td>アプリおよびSDKの動作に関する診断情報</td><td>性能の分析、広告サービスの運営、不正防止</td></tr>
+  </tbody>
+</table>
+
+<p>開発者はAdMobの広告表示回数や収益などのレポートを確認できますが、個々の利用者の元の識別子やIPアドレスを直接受け取ることはありません。IPアドレスからおおよその位置が推定される場合がありますが、本アプリはAndroidの位置情報へのアクセス権限を要求しません。</p>
+
+<p>Googleによるパートナーアプリのデータの利用方法については、<a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Googleサービスを使用するサイトやアプリから収集した情報の利用方法</a>と<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Googleプライバシーポリシー</a>をご覧ください。</p>
+
+<h2>3. アプリの利用分析</h2>
+
+<p>利用状況を把握してゲームを改善するために<strong>Google Analytics for Firebase</strong>を使用します。収集が許可された場合、SDKはアプリインスタンスID、マスキングされたIPアドレスから推定されるおおよその位置、アプリの起動やセッションなどの基本的な利用情報を処理する場合があります。</p>
+
+<p>開発者が追加で記録するイベントは、チャプターの開始・クリア（チャプター番号を含む）、デイリーチャレンジの開始・クリア、リワード広告の完了（広告の表示箇所を含む）です。氏名、メールアドレス、ユーザーID、正確な日付、スコアはイベントに直接追加しません。ゲームの保存データ全体や実績・バッジの記録は分析サービスにアップロードしません。</p>
+
+<p>これらの情報は、利用者数や機能の利用状況を把握し、ゲームを改善するために使用します。開発者はFirebase／Google Analyticsの集計レポートを確認できます。本アプリではFirebase Analyticsによる広告IDの収集と広告のパーソナライズを別途無効にしており、分析イベントを広告のターゲティング目的で別途送信しません。</p>
+
+<p>分析データの収集は初期状態で無効です。UMPに分析目的の保存（<code>analytics_storage</code>）を明示的に許可した記録がある場合に限り有効にします。同意が不要という応答や、同意状態がないことだけを理由に有効にしません。詳しくは<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebaseのプライバシーとセキュリティ</a>と<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Googleプライバシーポリシー</a>をご覧ください。</p>
+
+<h2>4. 広告・分析に関する同意と撤回</h2>
+
+<p>欧州経済領域（EEA）、英国、スイス、および米国の一部の州では、必要に応じて広告・分析に関する選択画面が表示されます。この画面はGoogleのUser Messaging Platform（UMP）によって提供されます。地域や利用者の選択によってデータの取り扱いが変わる場合があります。</p>
+
+<p>該当する地域で選択画面が提供される場合は、<strong>選択を変更できます。</strong></p>
+
+<ul>
+  <li><strong>アプリ内:</strong> 設定画面の「プライバシー設定」から、該当する選択画面を再度開けます。この項目は必要な地域でのみ表示されます。</li>
+  <li><strong>端末の設定:</strong> Androidの「設定 → Google → 広告」から広告IDをリセットまたは削除できます。項目の場所は端末やAndroidのバージョンによって異なります。</li>
+  <li><strong>Googleアカウント:</strong> <a href="https://adssettings.google.com" target="_blank" rel="noopener">Googleの広告設定</a>から広告のパーソナライズをオフにできます。</li>
+</ul>
+
+<p>広告のパーソナライズをオフにしても、一般的な広告が表示される場合があります。分析目的の保存を明示的に許可していない場合、本アプリはFirebase Analyticsの収集を有効にしません。</p>
+
+<h2>5. 本アプリが要求する権限</h2>
+
+<table>
+  <thead><tr><th>権限</th><th>利用目的</th></tr></thead>
+  <tbody>
+    <tr><td>インターネット接続</td><td>広告の取得と、許可された分析情報の送信に使用します。ゲームの進行自体にはインターネット接続は不要です。</td></tr>
+    <tr><td>振動</td><td>ボタンのタップや絵の接続時に触覚フィードバックを提供します。設定でオフにできます。</td></tr>
+    <tr><td>広告ID</td><td>Googleの広告ライブラリが広告配信に使用します。</td></tr>
+  </tbody>
+</table>
+
+<p>本アプリは位置情報、カメラ、マイク、連絡先、写真、ファイルへのアクセス権限を要求しません。</p>
+
+<h2>6. お子さまのプライバシー</h2>
+
+<p>本アプリは<strong>13歳以上</strong>の方を対象としており、13歳未満のお子さまを主な対象としていません。開発者は13歳未満のお子さまの個人情報を故意に収集しません。</p>
+
+<p>保護者の方が、お子さまが本アプリを通じて情報を提供したと思われる場合は、下記の連絡先までお知らせください。確認のうえ、該当情報の削除に向けて対応します。</p>
+
+<h2>7. 情報の保存と削除</h2>
+
+<ul>
+  <li>端末に保存されたゲームの進行記録と設定は、<strong>本アプリをアンインストールすると端末から削除されます。</strong></li>
+  <li>開発者は独自のアカウントデータベースやゲームの保存用サーバーを運営していません。</li>
+  <li>広告・分析SDKに送信された情報は、各サービスの保存・削除設定とGoogleのポリシーに従って取り扱われます。アンインストールしても、送信済みの情報が直ちに削除されるわけではありません。</li>
+</ul>
+
+<h2>8. 利用者の権利</h2>
+
+<p>お住まいの地域の法律（欧州のGDPR、米国カリフォルニア州のCCPA／CPRAなど）により、個人情報へのアクセス、訂正、削除、処理への異議申立てなどの権利が認められる場合があります。</p>
+
+<p>開発者は利用者の氏名やアカウントを保有していませんが、Google Analyticsのレポートを確認できます。情報の取り扱いや法令上の権利については下記メールアドレスまでお問い合わせください。Googleアカウントの広告設定やGoogleが処理する情報については、<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Googleプライバシーポリシー</a>をご覧ください。</p>
+
+<p>開発者は個人情報を販売しません。広告SDKは第2項、Google Analytics for Firebaseは第3項に記載した目的で情報を処理します。</p>
+
+<h2>9. 本ポリシーの変更</h2>
+
+<p>法令や本アプリの内容に変更があった場合、本ポリシーを改定することがあります。改定時には、このページに変更内容と施行日を掲載します。重要な変更については、アプリ内でも別途お知らせします。</p>
+
+<h2>10. お問い合わせ</h2>
+
+<p>本ポリシーや情報の取り扱いについては、以下にお問い合わせください。</p>
+
+<ul>
+  <li>開発者: Revel Mind Rebel</li>
+  <li>メール: <a href="mailto:revel.mind.rebel@gmail.com">revel.mind.rebel@gmail.com</a></li>
+</ul>
+
+</main>
+
 <footer>
   <p>Kindway: Connect Puzzle · Revel Mind Rebel<br>
-  최종 수정: 2026년 9월 24일 / Last updated: September 24, 2026</p>
+  최종 수정: 2026년 10월 4일 / Last updated: October 4, 2026 / 最終更新: 2026年10月4日</p>
 </footer>
 
 </div>
@@ -432,11 +564,12 @@ significant changes.</p>
 <script>
   (function () {
     var buttons = document.querySelectorAll('nav.lang button');
-    var panes = { ko: document.getElementById('ko'), en: document.getElementById('en') };
+    var panes = { ko: document.getElementById('ko'), en: document.getElementById('en'), ja: document.getElementById('ja') };
 
     function show(lang) {
       panes.ko.hidden = lang !== 'ko';
       panes.en.hidden = lang !== 'en';
+      panes.ja.hidden = lang !== 'ja';
       document.documentElement.lang = lang;
       buttons.forEach(function (b) {
         b.setAttribute('aria-pressed', String(b.dataset.lang === lang));
@@ -447,7 +580,8 @@ significant changes.</p>
       b.addEventListener('click', function () { show(b.dataset.lang); });
     });
 
-    show((navigator.language || 'en').toLowerCase().indexOf('ko') === 0 ? 'ko' : 'en');
+    var deviceLanguage = (navigator.language || 'en').toLowerCase();
+    show(deviceLanguage.indexOf('ko') === 0 ? 'ko' : (deviceLanguage.indexOf('ja') === 0 ? 'ja' : 'en'));
   })();
 </script>
 
